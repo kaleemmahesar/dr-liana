@@ -27,7 +27,7 @@ const ContactUs = () => {
 	
 	return (
 		<div className='contactus-area p-top-bottom-90'>
-			<Container>
+			<Container data-aos="fade-up" data-aos-offset="200" data-aos-delay="200" data-aos-duration="500">
 				<Row>
 					<Col>
 						<h2>Get in Touch with<span>Dr. Liana Lianov</span></h2>

@@ -1,13 +1,13 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap';
 
-const Publications = () => {
+const GphiPage = () => {
 	return (
 		<div className='p-top-bottom-90 background-grey'>
 			<Container>
 				<Row>
 					<Col>
-						<h2>Publications</h2>
+						<h2>GPHIs</h2>
 					</Col>
 				</Row>
 			</Container>
@@ -15,4 +15,4 @@ const Publications = () => {
 	)
 }
 
-export default Publications
+export default GphiPage

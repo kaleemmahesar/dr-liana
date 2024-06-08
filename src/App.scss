@@ -23,6 +23,22 @@ img {
 }
 .modal-dialog {
     min-width: 850px;
+    max-width: 70%;
+    .modal-header {
+        padding: 0;
+        border: none;
+        .btn-close {
+            position: absolute;
+            border-radius: 27px;
+            background-color: $secondary-color;
+            top: -3px;
+            right: -3px;
+            z-index: 22222;
+            opacity: 1;
+            color: white;
+            font-size: 12px;
+        }
+    }
     .modal-body {
         iframe {
             width: 100% !important;
@@ -37,6 +53,10 @@ img {
     color: $white;
     padding: 17px 35px;
     border: none;
+    &:hover,
+    &:active {
+        background-color: $secondary-color;
+    }
 }
 
 .para {
@@ -60,7 +80,8 @@ h2 {
     font-weight: 700;
     margin-bottom: 33px;
     font-family: $public-sans;
-    strong {
+    strong,
+    span {
         color: $secondary-color
     }
 }
@@ -103,6 +124,7 @@ h5 {
     padding: 0 50px 0 65px;
     text-decoration: none;
     position: relative;
+    transition: all 0.25s ease;
     &::before {
         position: absolute;
         top: 0;
@@ -113,6 +135,13 @@ h5 {
         width: 22px;
         height: 21px;
         background-image: url('./images/arrow.png');
+        transition: all 0.25s ease;
+    }
+    &:hover {
+        transform: scale(1.02);
+        &::before {
+            left: 34px;
+        }
     }
 }
 .form-label {
@@ -145,7 +174,7 @@ div.error {
     height: 100%;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.85);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -170,6 +199,7 @@ div.error {
             height: 17px;
             background-size: cover;
         }
+        
     }
     .btn-primary {
         min-width: 160px;
@@ -184,6 +214,10 @@ div.error {
             line-height: 26px;
         }
     }
+    .modal-dialog {
+        min-width: 90%;
+        max-width: 90%;
+    }
 }
 @include media-breakpoint-down(sm) {
     h1 {
@@ -193,6 +227,7 @@ div.error {
         font-size: 20px;
 
     }
+    
 }
 // Site Header styles
 .site-header {
@@ -206,9 +241,13 @@ div.error {
             padding: 0;
             font-size: 18px;
             color: #050F4E;
-            
+            transition: all 0.25s ease;
             &:last-child {
                 margin-inline-start: 0;
+            }
+            &:hover {
+                transform: scale(1.05);
+                color: $secondary-color;
             }
         }
         .btn-contact {
@@ -220,6 +259,11 @@ div.error {
             border-radius: 4px;
             font-size: 18px;
             color: $white;
+            transition: all 0.25s ease;
+            &:hover {
+                transform: scale(1.05);
+                background-color: $secondary-color;
+            }
         }
         .navbar-brand {
             margin-right: 0;
@@ -367,12 +411,20 @@ div.error {
             height: 141px;
             padding: 0 27px;
             text-align: center;
+            transition: all 0.25s ease;
             &::before {
                 left: auto;
                 right: 10px;
                 margin: 0;
                 bottom: 14px;
                 top: auto;
+                transition: all 0.25s ease;
+            }
+            &:hover {
+                transform: scale(1.02);
+                &::before {
+                    right: 4px;
+                }
             }
         }
     }

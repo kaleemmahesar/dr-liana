@@ -14,7 +14,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 
 function Testimonials() {
     return (
-        <div className='testimonials p-top-bottom-90'>
+        <div className='testimonials p-top-bottom-90' data-aos="fade-up" data-aos-offset="200" data-aos-delay="200" data-aos-duration="500">
             <Container>
                 <Row>
                     <Col lg={12}>

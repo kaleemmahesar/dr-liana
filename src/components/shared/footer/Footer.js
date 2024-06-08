@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <>
             <div className='site-footer'>
-                <Container>
+                <Container data-aos="fade-up">
                     <Row>
                         <Col lg={7}>
                             <img src={fLogo} alt='footer logo' />

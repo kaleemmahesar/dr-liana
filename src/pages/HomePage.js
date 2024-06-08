@@ -7,20 +7,10 @@ import Publications from '../components/Publications'
 import Achievements from '../components/Achievements'
 import { Spinner } from 'react-bootstrap'
 
-const Home = () => {
-	const [isLoading, setIsLoading] = useState(true);
-
-	const handleLoading = () => {
-		setIsLoading(false);
-	}
-
-	useEffect(()=>{
-		window.addEventListener("load",handleLoading);
-		return () => window.removeEventListener("load",handleLoading);
-	},[])
-
-	return !isLoading ? (
-		<main className=''>
+const HomePage = () => {
+	
+	return (
+		<main className='site-content'>
 			<Intro />
 			<About />
 			<Achievements />
@@ -28,11 +18,7 @@ const Home = () => {
 			<Testimonials />
 			<ContactUs />
 		</main>
-	): (
-		<div className='spinner-wrapper'>
-			<Spinner animation="grow" variant="info" />
-		</div>
 	)
 }
 
-export default Home
+export default HomePage

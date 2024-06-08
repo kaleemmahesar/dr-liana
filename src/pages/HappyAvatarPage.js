@@ -1,13 +1,13 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap';
 
-const Gphi = () => {
+function HappyAvatarPage() {
 	return (
 		<div className='p-top-bottom-90 background-grey'>
 			<Container>
 				<Row>
 					<Col>
-						<h2>GPHI</h2>
+						<h2>Happy Avatars</h2>
 					</Col>
 				</Row>
 			</Container>
@@ -15,4 +15,4 @@ const Gphi = () => {
 	)
 }
 
-export default Gphi
+export default HappyAvatarPage

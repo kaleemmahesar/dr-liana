@@ -17,7 +17,7 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                         <Nav className="my-2 my-lg-0 align-items-center" navbarScroll>
-                            { pages.length > 0 ? pages?.map((page, index) => {
+                            {/* { pages.length > 0 ? pages?.map((page, index) => {
                                 // const {  } = page
                                 if (page.slug !== 'home') {
                                     const originalString = page.title.rendered
@@ -26,7 +26,14 @@ const Header = () => {
                                         <NavLink key={page.id} className={`${index == 1 ? "btn btn-contact" : "nav-link"}`} to={page.slug}>{replaceTitle}</NavLink>
                                     )
                                 }
-                            }) : `server not connected`}
+                            }) : `server not connected`} */}
+                            <NavLink className='btn btn-contact' to="/contact-us">Contact Us</NavLink>
+                            <NavLink className="nav-link" to="/my-happy-avatar">My happy avatar</NavLink>
+                            <NavLink className="nav-link" to="/gphi">GPHI</NavLink>
+                            <NavLink className="nav-link" to="/achievements">Achievements</NavLink>
+                            <NavLink className="nav-link" to="/publications">Publications</NavLink>
+                            <NavLink className="nav-link" to="/speaking-consulting">Speaking &amp; Consulting</NavLink>
+                            <NavLink className="nav-link" to="/about">About</NavLink>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

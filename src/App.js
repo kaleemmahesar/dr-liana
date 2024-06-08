@@ -5,16 +5,18 @@ import { useEffect } from 'react';
 import { fetchPosts, fetchPublications } from './redux/slices/postsSlice';
 import Header from './components/shared/header/Header';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
-import About from './pages/About';
-import SpeakingConsulting from './pages/SpeakingConsulting';
-import Publications from './pages/Publications';
-import Achievements from './pages/Achievements';
-import Gphi from './pages/Gphi';
-import HappyAvatar from './pages/HappyAvatar';
-import ContactUs from './pages/ContactUs';
 import { fetchPages } from './redux/slices/pagesSlice';
 import Footer from './components/shared/footer/Footer';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import SpeakingConsultingPage from './pages/SpeakingConsultingPage';
+import PublicationsPage from './pages/PublicationsPage';
+import AchievementsPage from './pages/AchievementsPage';
+import GphiPage from './pages/GphiPage';
+import HappyAvatarPage from './pages/HappyAvatarPage';
+import ContactUsPage from './pages/ContactUsPage';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function App() {
 	const dispatch = useDispatch()
@@ -23,20 +25,21 @@ function App() {
 		dispatch(fetchPosts())
 		dispatch(fetchPages())
 		dispatch(fetchPublications())
+		AOS.init();
 	}, [])
 	
 	return (
 		<BrowserRouter>
 			<Header />
 			<Routes>
-				<Route path='/dr-liana' element={<Home />}></Route>
-				<Route path='/about' element={<About />}></Route>
-				<Route path='/speaking-consulting' element={<SpeakingConsulting />}></Route>
-				<Route path='/publications' element={<Publications />}></Route>
-				<Route path='/achievements' element={<Achievements />}></Route>
-				<Route path='/gphi' element={<Gphi />}></Route>
-				<Route path='/my-happy-avatar' element={<HappyAvatar />}></Route>
-				<Route path='/contact-us' element={<ContactUs />}></Route>
+				<Route path='/dr-liana' element={<HomePage />}></Route>
+				<Route path='/about' element={<AboutPage />}></Route>
+				<Route path='/speaking-consulting' element={<SpeakingConsultingPage />}></Route>
+				<Route path='/publications' element={<PublicationsPage />}></Route>
+				<Route path='/achievements' element={<AchievementsPage />}></Route>
+				<Route path='/gphi' element={<GphiPage />}></Route>
+				<Route path='/my-happy-avatar' element={<HappyAvatarPage />}></Route>
+				<Route path='/contact-us' element={<ContactUsPage />}></Route>
 			</Routes>
 			<Footer />
 		</BrowserRouter>

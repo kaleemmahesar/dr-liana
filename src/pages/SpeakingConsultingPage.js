@@ -1,13 +1,13 @@
 import React from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
+import { Col, Container, Row } from 'react-bootstrap';
 
-const About = () => {
+const SpeakingConsultingPage = () => {
 	return (
 		<div className='p-top-bottom-90 background-grey'>
 			<Container>
 				<Row>
 					<Col>
-						<h2>About Us</h2>
+						<h2>Speaking & Consulting</h2>
 					</Col>
 				</Row>
 			</Container>
@@ -15,4 +15,4 @@ const About = () => {
 	)
 }
 
-export default About
+export default SpeakingConsultingPage
