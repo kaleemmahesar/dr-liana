@@ -31,7 +31,7 @@ function Testimonials() {
                             slidesPerView={3}
                             pagination={true}
                             navigation={ false }
-                            autoplay={ true }
+                            autoplay={ false }
                             loop={true}
                             centeredSlides={true}
                             initialSlide={1}
