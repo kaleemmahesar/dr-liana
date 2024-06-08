@@ -15,8 +15,8 @@ import AchievementsPage from './pages/AchievementsPage';
 import GphiPage from './pages/GphiPage';
 import HappyAvatarPage from './pages/HappyAvatarPage';
 import ContactUsPage from './pages/ContactUsPage';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+// import AOS from 'aos';
+// import 'aos/dist/aos.css';
 
 function App() {
 	const dispatch = useDispatch()
@@ -25,7 +25,7 @@ function App() {
 		dispatch(fetchPosts())
 		dispatch(fetchPages())
 		dispatch(fetchPublications())
-		AOS.init();
+		// AOS.init();
 	}, [])
 	
 	return (
