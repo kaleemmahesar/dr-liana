@@ -20,9 +20,9 @@ function App() {
 	const dispatch = useDispatch()
 
 	useEffect(() => {
-		dispatch(fetchPosts())
-		dispatch(fetchPages())
-		dispatch(fetchPublications())
+		// dispatch(fetchPosts())
+		// dispatch(fetchPages())
+		// dispatch(fetchPublications())
 	}, [])
 	
 	return (
