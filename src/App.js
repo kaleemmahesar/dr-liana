@@ -20,16 +20,16 @@ function App() {
 	const dispatch = useDispatch()
 
 	useEffect(() => {
-		// dispatch(fetchPosts())
-		// dispatch(fetchPages())
-		// dispatch(fetchPublications())
+		dispatch(fetchPosts())
+		dispatch(fetchPages())
+		dispatch(fetchPublications())
 	}, [])
 	
 	return (
 		<BrowserRouter>
 			<Header />
 			<Routes>
-				<Route path='/' element={<Home />}></Route>
+				<Route path='/home' element={<Home />}></Route>
 				<Route path='/about' element={<About />}></Route>
 				<Route path='/speaking-consulting' element={<SpeakingConsulting />}></Route>
 				<Route path='/publications' element={<Publications />}></Route>
