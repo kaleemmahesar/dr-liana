@@ -1,6 +1,9 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import axios from 'axios';
 
+// const serverName = "https://dr-liana.000webhostapp.com/"
+const serverName = "http://localhost/wp-react/server/"
+
 // state initial state
 const initialState = {
     isLoading: false,
@@ -33,7 +36,7 @@ export const pagesSlice = createSlice({
 
 // fetching pages from wp server using Async Thunk
 export const fetchPages = createAsyncThunk('fetchPages', async () => {
-    const response = await axios.get('http://localhost/wp-react/server/wp-json/wp/v2/pages')
+    const response = await axios.get(`${serverName}/wp-json/wp/v2/pages`)
     return response.data
 })
 

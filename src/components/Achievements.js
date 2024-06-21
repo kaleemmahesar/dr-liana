@@ -21,20 +21,28 @@ const Achievements = () => {
 					<Col lg={6} data-aos="zoom-out" data-aos-offset="200" data-aos-delay="200" data-aos-easing="ease-in-sine" data-aos-duration="500">
 						<ul className='achievement-box'>
 							<li>
-								<Image src={ProfileImage} alt='hello' />
-								<h5>Presentations</h5>
+								<Link to="/achievements">
+									<Image src={ProfileImage} alt='hello' />
+									<h5>Presentations</h5>
+								</Link>
 							</li>
 							<li>
-								<Image src={CaseImage} alt='hello' />
-								<h5>Thought Leadership</h5>
+								<Link to="/achievements">
+									<Image src={CaseImage} alt='hello' />
+									<h5>Thought Leadership</h5>
+								</Link>
 							</li>
 							<li>
-								<Image src={BookImage} alt='hello' />
-								<h5>Career positions</h5>
+								<Link to="/achievements">
+									<Image src={BookImage} alt='hello' />
+									<h5>Career positions</h5>
+								</Link>
 							</li>
 							<li>
-								<Image src={CupImage} alt='hello' />
-								<h5>Awards</h5>
+								<Link to="/achievements">
+									<Image src={CupImage} alt='hello' />
+									<h5>Awards</h5>
+								</Link>
 							</li>
 						</ul>
 					</Col>
