@@ -69,20 +69,27 @@ const ContactUs = () => {
 	
 
 	const handlePostRequest = (values) => {
-		// axios.post('http://localhost/wp-react/server/wp-json/contact-form-7/v1/contact-forms', {
+		// axios.post('http://localhost/wp-react/server/wp-json/wp/v2/posts', {
 
 		// }).then(response => {
 												
 		// 										})
-		// axios.post('http://localhost/wp-react/server/wp-json/contact-form-7/v1/contact-forms', {
-		// 	values
-		//   })
-		//   .then(function (response) {
-		// 	console.log(response);
-		//   })
-		//   .catch(function (error) {
-		// 	console.log(error);
-		//   });
+		// const formData = {...values, "status": "publish"}
+		// console.log(formData)
+		axios.post('http://localhost/wp-react/server/wp-json/wp/v2/contact-forms', {
+			"title": values.title,
+			"content": values.content,
+			"excerpt": values.content,
+			"status": "publish"
+			// const formData = {...values, status: "publish"}
+			
+		})
+		  .then(function (response) {
+			console.log(response);
+		  })
+		  .catch(function (error) {
+			console.log(error);
+		  });
 		console.log(values)
 	}
 	return (

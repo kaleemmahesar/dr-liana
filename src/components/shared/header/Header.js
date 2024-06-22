@@ -6,7 +6,6 @@ import { useSelector } from 'react-redux';
 
 const Header = () => {
     const pages = useSelector((state) => state.pages.pages)
-    
     return (
         <div className='site-header'>
             <Navbar expand="lg" className='site-navigation'>
@@ -22,8 +21,16 @@ const Header = () => {
                                 if (page.slug !== 'home') {
                                     const originalString = page.title.rendered
                                     const replaceTitle = originalString.replace(/&amp;/g, '&');
+                                    const pageLink = new URL(`${page.link}`)
+                                    const pageLinkHost = pageLink.hostname
+                                    // console.log(pageLinkHost)
+                                    // if() {
+                                    //     console.log('internal url')
+                                    // } else {
+                                    //     console.log('external url')
+                                    // }
                                     return (
-                                        <NavLink key={page.id} className={`${index == 1 ? "btn btn-contact" : "nav-link"}`} to={page.slug}>{replaceTitle}</NavLink>
+                                        <NavLink key={page.id} className={`${index == 1 ? "btn btn-contact" : "nav-link"}`} to={window.location.hostname === pageLinkHost ? page.slug : page.link} target={window.location.hostname === pageLinkHost ? "_self" : "_blank"}>{replaceTitle}</NavLink>
                                     )
                                 }
                             }) : `server not connected`}
