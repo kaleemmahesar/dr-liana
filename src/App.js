@@ -33,9 +33,9 @@ function App() {
 	return (
 		<BrowserRouter>
 			<Header />
-			<Router basename='/'>
+			<Router basename='/dr-liana'>
 			<Routes>
-				<Route path='/' element={<HomePage />}></Route>
+				<Route path='/dr-liana' element={<HomePage />}></Route>
 				<Route path='/about' element={<AboutPage />}></Route>
 				<Route path='/speaking-consulting' element={<SpeakingConsultingPage />}></Route>
 				<Route path='/publications' element={<PublicationsPage />}></Route>
