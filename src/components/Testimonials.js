@@ -64,7 +64,7 @@ function Testimonials() {
                             {
                                 testmonials.map((testimonial) => {
                                     return (
-                                        <SwiperSlide>
+                                        <SwiperSlide key={testimonial.id}>
                                             <div className='slide-box'>
                                                 <p className='para' dangerouslySetInnerHTML={{ __html: testimonial?.content?.rendered}}></p>
                                                 <h6 dangerouslySetInnerHTML={{ __html: testimonial?.title?.rendered}}></h6>

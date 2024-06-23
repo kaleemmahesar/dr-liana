@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import axios from 'axios';
 // const serverName = "https://dr-liana.000webhostapp.com/"
-const serverName = "http://localhost/wp-react/server/"
+const serverName = "https://lianalianov.com/wp/"
 // console.log(serverName)
 
 // state initial state
