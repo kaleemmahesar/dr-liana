@@ -45,7 +45,7 @@ const About = () => {
                         <p className='para'>Dr. Liana Lianov, MD, MPH, FACLM, FACPM, DipABLM, is a visionary global leader in lifestyle medicine and positive health. As the driving force behind the development of the groundbreaking lifestyle medicine core competencies, Dr. Lianov has played a pivotal role in shaping the future of healthcare. She received the 2022 Trailblazer Award from the American College of Lifestyle Medicine (ACLM). Her leadership extends to her role as lead faculty for the ACLM Physician and Health Professional Wellbeing course, as well as chair of the ACLM Happiness Science and Positive  Health Committee. She is the president and founder of the Global Positive Health Institute (GPHI), and she serves as an Assistant Professor at the Center for Positive Health Sciences at Royal College of Surgeons Ireland – RCSI University of Medical and Health Sciences.</p> */}
                         <div className='' dangerouslySetInnerHTML={{ __html: homeContent?.acf?.about_text }}></div>
                         <img src={homeContent?.acf?.about_signature} alt='about signature' />
-                        <Link className='btn btn-primary' to={homeContent?.acf?.about_button_link}>{homeContent?.acf?.about_button}</Link>
+                        {homeContent?.acf?.about_button !== '' && <Link className='btn btn-primary' to={homeContent?.acf?.about_button_link}>{homeContent?.acf?.about_button}</Link>}
                     </Col>
                 </Row>
             </Container>

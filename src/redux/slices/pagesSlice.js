@@ -36,7 +36,8 @@ export const pagesSlice = createSlice({
 
 // fetching pages from wp server using Async Thunk
 export const fetchPages = createAsyncThunk('fetchPages', async () => {
-    const response = await axios.get(`${serverName}/wp-json/wp/v2/pages`)
+    const response = await axios.get(`${serverName}/wp-json/wp/v2/pages/?per_page=100`)
+    console.log(response.data)
     return response.data
 })
 

@@ -16,6 +16,10 @@ import GphiPage from './pages/GphiPage';
 import HappyAvatarPage from './pages/HappyAvatarPage';
 import ContactUsPage from './pages/ContactUsPage';
 import SinglePublication from './components/SinglePublication';
+import Presentations from './pages/Presentations';
+import Awards from './pages/Awards';
+import ThoughtLeadership from './pages/ThoughtLeadership';
+import CareerPositions from './pages/CareerPositions';
 // import AOS from 'aos';
 // import 'aos/dist/aos.css';
 
@@ -33,9 +37,8 @@ function App() {
 	return (
 		<BrowserRouter>
 			<Header />
-			<Router basename='/dr-liana'>
 			<Routes>
-				<Route path='/dr-liana' element={<HomePage />}></Route>
+				<Route path='/' element={<HomePage />}></Route>
 				<Route path='/about' element={<AboutPage />}></Route>
 				<Route path='/speaking-consulting' element={<SpeakingConsultingPage />}></Route>
 				<Route path='/publications' element={<PublicationsPage />}></Route>
@@ -44,8 +47,11 @@ function App() {
 				<Route path='/my-happy-avatar' element={<HappyAvatarPage />}></Route>
 				<Route path='/contact-us' element={<ContactUsPage />}></Route>
 				<Route path='/publications/:name' element={<SinglePublication />}></Route>
+				<Route path='/presentations' element={<Presentations />}></Route>
+				<Route path='/awards' element={<Awards />}></Route>
+				<Route path='/thought-leadership' element={<ThoughtLeadership />}></Route>
+				<Route path='/career-positions' element={<CareerPositions />}></Route>
 			</Routes>
-			</Router>
 			<Footer />
 		</BrowserRouter>
 	);

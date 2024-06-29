@@ -29,10 +29,10 @@ const Footer = () => {
                 <Container>
                     <Row>
                         <Col lg={7}>
-                            <p>© 2024 Dr. Liana Lianov. All rights reserved</p>
+                            <p>©2024 Dr. Liana Lianov. All rights reserved</p>
                         </Col>
                         <Col lg={{span: 4, offset: 1}}>
-                            <p>Terms & Privacy policy</p>
+                            <p><Link to="/terms-and-conditions">Terms & Conditions</Link> | <Link to="/privacy-policy">Privacy policy</Link></p>
                         </Col>
                     </Row>
                 </Container>

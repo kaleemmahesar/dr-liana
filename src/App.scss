@@ -13,6 +13,18 @@ $para-color: #424242;
 // Generic Styles
 body {
     font-family: $public-sans;
+    ul,
+    ol {
+        li {
+            font-size: 20px;
+            margin-bottom: 15px;
+            text-transform: capitalize;
+            &:last-child {
+                margin-bottom: 0;
+                
+            }
+        }
+    }
 }
 
 img {
@@ -690,6 +702,9 @@ div.error {
             max-width: 500px;
             text-align: center;
             position: relative;
+            min-height: 550px;
+            display: flex;
+            align-items: center;
             &::before {
                 content: '';
                 width: 30px;
@@ -723,7 +738,7 @@ div.error {
                 margin: 0;
             }
             &.swiper-slide-active {
-                padding: 75px 75px 50px;
+                // padding: 75px 75px 50px;
                 background-color: #EAEAEA;
                 opacity: 1;
                 // width: 38% !important;
@@ -735,12 +750,12 @@ div.error {
                     position: absolute;
                 }
                 p {
-                    font-size: 26px;
-                    line-height: 1.5;
-                    margin-bottom: 20px;
+                    // font-size: 26px;
+                    // line-height: 1.5;
+                    // margin-bottom: 20px;
                 }
                 h6 {
-                    font-size: 26px;
+                    // font-size: 20px;
                 }
                 .slide-box {
                     // max-width: 100%;
@@ -936,6 +951,13 @@ div.error {
         color: $primary-color;
         margin: 0;
         font-size: 16px;
+    }
+    a {
+        color: $primary-color;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
     }
     @include media-breakpoint-down(lg) {
         padding: 20px 0 30px;

@@ -34,7 +34,7 @@ function Intro() {
                                 <p><Link to={homeContent?.acf?.intro_text_social_icon_one_link}><img src={homeContent?.acf?.intro_text_social_icon_one} alt="youtube" /></Link></p>
                                 <p><Link to={homeContent?.acf?.intro_text_social_icon_two_link}><img src={homeContent?.acf?.intro_text_social_icon_two} alt="linked" /></Link></p>
                             </div>
-                            <Link to={homeContent?.acf?.intro_text_button_link} className='intro-btn'>{homeContent?.acf?.intro_text_button}</Link>
+                            {homeContent?.acf?.intro_text_button !== '' && <Link to={homeContent?.acf?.intro_text_button_link} className='intro-btn'>{homeContent?.acf?.intro_text_button}</Link>}
                         </div>
                     </Col>
                     <Col lg={5} md={12}>

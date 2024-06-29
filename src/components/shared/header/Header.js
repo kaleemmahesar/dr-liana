@@ -11,19 +11,21 @@ const Header = () => {
             <Navbar expand="lg" className='site-navigation'>
                 <Container>
                     <Navbar.Brand>
-                        <NavLink to="/dr-liana"><img src={hLogo} alt='header logo' /></NavLink>
+                        <NavLink to="/"><img src={hLogo} alt='header logo' /></NavLink>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                         <Nav className="my-2 my-lg-0 align-items-center" navbarScroll>
                             { pages.length > 0 ? pages?.map((page, index) => {
-                                if (page.slug !== 'home') {
+                                // console.log(index)
+                                if (page.slug !== 'home' && page.slug !== 'privacy-policy' && page.slug !== 'terms-and-conditions' && page.slug !== 'awards' && page.slug !== 'presentations' && page.slug !== 'career-positions' && page.slug !== 'thought-leadership') {
                                     const originalString = page.title.rendered
                                     const replaceTitle = originalString.replace(/&amp;/g, '&');
                                     const pageLink = new URL(`${page.link}`)
                                     const pageLinkHost = pageLink.hostname
+                                    console.log(index)
                                     return (
-                                        <NavLink key={page.id} className={`${index == 1 ? "btn btn-contact" : "nav-link"}`} to={window.location.hostname === pageLinkHost ? page.slug : page.link} target={window.location.hostname === pageLinkHost ? "_self" : "_blank"}>{replaceTitle}</NavLink>
+                                        <NavLink key={page.id} className={`${index === 7 ? "btn btn-contact" : "nav-link"}`} to={window.location.hostname === pageLinkHost ? page.slug : page.link} target={window.location.hostname === pageLinkHost ? "_self" : "_blank"}>{replaceTitle}</NavLink>
                                     )
                                 }
                             }) : `server not connected`}

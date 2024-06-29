@@ -8,7 +8,7 @@ import { useSelector } from 'react-redux'
 function Publications() {
     const { publications, isLoading } = useSelector((state) => state.posts)
     
-    const [itemsToShow, setItemsToShow] = useState(4);
+    const [itemsToShow, setItemsToShow] = useState(3);
 
     const [showLoadmore, setShowLoadMore] = useState(false);
 
@@ -16,12 +16,12 @@ function Publications() {
 
     const showMorePublications = () => {
         if(itemsToShow !== publications.length) {
-            setItemsToShow(itemsToShow + 4)
+            setItemsToShow(itemsToShow + 3)
         }
     }
 
     useEffect(() => {
-        if(publications?.length > 4) {
+        if(publications?.length > 3) {
             console.log('working on load')
             setShowLoadMore(true)
         }
@@ -52,7 +52,7 @@ function Publications() {
                             console.log(plinksLast)
                             return (
                                 
-                                <Col key={publication.id} xl={6} lg={12}>
+                                <Col key={publication.id} xl={12} lg={12}>
                                     <div className='book-box'>
                                         <Image src={publication?._embedded['wp:featuredmedia']['0'].source_url} />
                                         <div className='boox-text'>

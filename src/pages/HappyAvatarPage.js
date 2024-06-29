@@ -3,7 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 
 function HappyAvatarPage() {
 	return (
-		<div className='p-top-bottom-90 background-grey'>
+		<div className='p-top-bottom-90'>
 			<Container>
 				<Row>
 					<Col>
