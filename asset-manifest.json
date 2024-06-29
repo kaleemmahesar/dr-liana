@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/dr-liana/static/css/main.e76b35ae.css",
-    "main.js": "/dr-liana/static/js/main.773bc4c1.js",
+    "main.css": "/dr-liana/static/css/main.cfeb5441.css",
+    "main.js": "/dr-liana/static/js/main.23d7d709.js",
     "static/js/453.a323b942.chunk.js": "/dr-liana/static/js/453.a323b942.chunk.js",
     "static/media/about.png": "/dr-liana/static/media/about.7dfbd59ab91eed295a4b.png",
     "static/media/about1.png": "/dr-liana/static/media/about1.ef3ed44ae857b0d6815f.png",
@@ -11,12 +11,12 @@
     "static/media/flogo.png": "/dr-liana/static/media/flogo.966738032f9b6949a5ac.png",
     "static/media/logo.svg": "/dr-liana/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/dr-liana/index.html",
-    "main.e76b35ae.css.map": "/dr-liana/static/css/main.e76b35ae.css.map",
-    "main.773bc4c1.js.map": "/dr-liana/static/js/main.773bc4c1.js.map",
+    "main.cfeb5441.css.map": "/dr-liana/static/css/main.cfeb5441.css.map",
+    "main.23d7d709.js.map": "/dr-liana/static/js/main.23d7d709.js.map",
     "453.a323b942.chunk.js.map": "/dr-liana/static/js/453.a323b942.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e76b35ae.css",
-    "static/js/main.773bc4c1.js"
+    "static/css/main.cfeb5441.css",
+    "static/js/main.23d7d709.js"
   ]
 }
